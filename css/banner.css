@@ -1,7 +1,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
 }
 
 .banner {
@@ -9,6 +9,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0%);
+  z-index: 99999;
 
   max-width: 1024px;
   width: 100%;
@@ -31,6 +32,7 @@ body {
   position: absolute;
   top: -24px;
   right: 0;
+  z-index: 999;
 
   padding: 4px;
   border: transparent;
@@ -143,25 +145,25 @@ body {
 .waves {
   left: 42px;
   bottom: 8px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .star {
   left: 120px;
   top: 3px;
-  z-index: 2;
+  z-index: 5;
 }
 
 .ellipse {
   right: 76px;
   bottom: 2px;
-  z-index: 3;
+  z-index: 5;
 }
 
 .dots {
   right: -18px;
   top: -16px;
-  z-index: 4;
+  z-index: 5;
 }
 
 @media screen and (min-width: 768px) {

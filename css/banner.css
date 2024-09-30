@@ -44,6 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   width: 100%;
   height: 90px;
@@ -116,11 +117,11 @@ body {
   color: #fff;
 }
 
-.buy-button {
+.buy-now {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 67px;
+  width: 65px;
   height: 41px;
   border: transparent;
   border-radius: 10px;
@@ -131,6 +132,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.05em;
   line-height: normal;
+  text-align: center;
   text-transform: uppercase;
 
   background: #fff;
@@ -175,7 +177,7 @@ body {
     width: 159px;
   }
 
-  .buy-button {
+  .buy-now {
     width: 175px;
     height: 41px;
     border-radius: 20px;
@@ -238,7 +240,7 @@ body {
     margin-right: 149px;
   }
 
-  .buy-button {
+  .buy-now {
     width: 158px;
     height: 37px;
     font-size: 25px;

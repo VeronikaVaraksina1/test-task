@@ -95,11 +95,11 @@ body {
 }
 
 .text-container-yellow {
-  animation: slide-down 6s ease-out infinite;
+  animation: slide-down 6s linear infinite;
 }
 
 .text-container-white {
-  animation: slide-down 6s ease-out infinite 3s;
+  animation: slide-down 6s linear infinite 3s;
 }
 
 .text-yellow {

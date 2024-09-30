@@ -1,0 +1,288 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  max-width: 1024px;
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+
+  background-color: #283693;
+  transition: transform 250ms ease-in;
+}
+
+.hidden {
+  transform: translate(-50%, 150%);
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: -24px;
+  right: 0;
+
+  padding: 4px;
+  border: transparent;
+  background-color: transparent;
+  stroke: #000;
+  fill: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 90px;
+
+  overflow: hidden;
+}
+
+.img-container {
+  width: 116px;
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  left: 4px;
+  top: -150%;
+  transform: translateY(-50%);
+  z-index: 998;
+}
+
+.img-container-shoes {
+  animation: slide-down 6s linear infinite reverse;
+}
+
+.img-container-girl {
+  animation: slide-down 6s linear infinite 3s reverse;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 148px;
+  height: 100%;
+
+  text-align: center;
+}
+
+.text-container-yellow,
+.text-container-white {
+  position: absolute;
+  top: -150%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.text-container-yellow {
+  animation: slide-down 6s ease-out infinite;
+}
+
+.text-container-white {
+  animation: slide-down 6s ease-out infinite 3s;
+}
+
+.text-yellow {
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: #ffc400;
+}
+
+.text-white {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67px;
+  height: 41px;
+  border: transparent;
+  border-radius: 10px;
+  margin-right: 10px;
+
+  font-size: 16px;
+  color: #283693;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: normal;
+  text-transform: uppercase;
+
+  background: #fff;
+  animation: scale 6s infinite 3s;
+}
+
+.icon {
+  position: absolute;
+}
+
+.waves {
+  left: 42px;
+  bottom: 8px;
+  z-index: 1;
+}
+
+.star {
+  left: 120px;
+  top: 3px;
+  z-index: 2;
+}
+
+.ellipse {
+  right: 76px;
+  bottom: 2px;
+  z-index: 3;
+}
+
+.dots {
+  right: -18px;
+  top: -16px;
+  z-index: 4;
+}
+
+@media screen and (min-width: 768px) {
+  .img-container {
+    width: 159px;
+    margin-left: 44px;
+  }
+
+  .img {
+    width: 159px;
+  }
+
+  .buy-button {
+    width: 175px;
+    height: 41px;
+    border-radius: 20px;
+    font-size: 27px;
+    margin-right: 34px;
+  }
+
+  .slider {
+    width: 250px;
+    margin-left: 97px;
+    margin-right: 26px;
+    line-height: 1.2;
+  }
+
+  .text-yellow {
+    font-size: 48px;
+    letter-spacing: 0.01em;
+  }
+
+  .text-white {
+    font-size: 20.8px;
+  }
+
+  .waves {
+    width: 110px;
+    height: 37px;
+    left: 117px;
+    bottom: 2px;
+  }
+
+  .star {
+    width: 29px;
+    height: 29px;
+    left: 252px;
+    top: 5px;
+  }
+
+  .ellipse {
+    width: 27px;
+    height: 27px;
+    right: 202px;
+    bottom: 9px;
+  }
+
+  .dots {
+    width: 46px;
+    height: 44px;
+    right: -16px;
+    top: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .img-container {
+    margin-left: 110px;
+  }
+
+  .slider {
+    margin-left: 127px;
+    margin-right: 149px;
+  }
+
+  .buy-button {
+    width: 158px;
+    height: 37px;
+    font-size: 25px;
+    margin-right: 88px;
+  }
+
+  .waves {
+    left: 187px;
+  }
+
+  .star {
+    left: 334px;
+  }
+
+  .ellipse {
+    right: 302px;
+  }
+
+  .dots {
+    right: 4px;
+  }
+}
+
+@keyframes scale {
+  0%, 41%, 45%, 49%, 53% {
+    transform: scale(1);
+  }
+  43%, 47%, 51% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-down {
+  0%, 16% {
+    top: -200%;
+  }
+
+  33%, 66% {
+    top: 50%;
+  }
+
+  84%, 100% {
+    top: 200%;
+  }
+}

@@ -61,17 +61,18 @@ body {
 .img {
   position: absolute;
   left: 4px;
-  top: -150%;
   transform: translateY(-50%);
   z-index: 998;
 }
 
 .img-container-shoes {
-  animation: slide-down 6s linear infinite reverse;
+  top: 50%;
+  animation: picture-down-first 2s linear 1 forwards, slide-down 6s linear infinite 3s reverse;
 }
 
 .img-container-girl {
-  animation: slide-down 6s linear infinite 3s reverse;
+  top: -150%;
+  animation: slide-down 6s linear infinite 100ms reverse;
 }
 
 .slider {
@@ -86,20 +87,21 @@ body {
   text-align: center;
 }
 
-.text-container-yellow,
-.text-container-white {
+.text-container-1,
+.text-container-2 {
   position: absolute;
-  top: -150%;
   transform: translateY(-50%);
   z-index: 9999;
 }
 
-.text-container-yellow {
-  animation: slide-down 6s linear infinite;
+.text-container-1 {
+  top: 50%;
+  animation: slide-down-first 2s linear 1 forwards, slide-down 6s linear infinite 3s;
 }
 
-.text-container-white {
-  animation: slide-down 6s linear infinite 3s;
+.text-container-2 {
+  top: -150%;
+  animation: slide-down 6s linear infinite 100ms;
 }
 
 .text-yellow {
@@ -121,6 +123,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 9999;
+
   width: 65px;
   height: 41px;
   border: transparent;
@@ -136,7 +141,7 @@ body {
   text-transform: uppercase;
 
   background: #fff;
-  animation: scale 6s infinite 3s;
+  animation: scale 6s infinite;
 }
 
 .icon {
@@ -237,7 +242,7 @@ body {
 
   .slider {
     margin-left: 127px;
-    margin-right: 149px;
+    margin-right: 127px;
   }
 
   .buy-now {
@@ -273,6 +278,26 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes picture-down-first {
+  0%, 50% {
+    top: 50%;
+  }
+
+  100% {
+    top: -150%;
+  }
+}
+
+@keyframes slide-down-first {
+  0%, 50% {
+    top: 50%;
+  }
+
+  100% {
+    top: 150%;
   }
 }
 
